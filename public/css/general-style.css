@@ -1,0 +1,41 @@
+@import url("header.css");
+@import url("footer.css");
+
+:root {
+    --main-color: rgb(38, 62, 77);
+    --accent-color: rgb(45, 112, 13);
+    --max-width: 1024px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+select,
+input,
+textarea,
+button {
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+.max-width {
+    max-width: var(--max-width) !important;
+    margin: 0 auto;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
