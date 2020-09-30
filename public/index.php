@@ -15,21 +15,22 @@
     ?>
 
     <main>
-        <div class="max-width">
-            <section categories>
-                <ul>
-                    <li class="btn">Cinema</li>
-                    <li class="btn">Sport</li>
-                    <li class="btn">Télévision</li>
-                    <li class="btn">Cuisine</li>
-                    <li class="btn">Jeux Vidéo</li>
-                    <li class="btn">Autre</li>
-                </ul>
-            </section>
+        <section categories>
+            <ul class="max-width">
+                <li class="btn">Cinema</li>
+                <li class="btn">Sport</li>
+                <li class="btn">Télévision</li>
+                <li class="btn">Cuisine</li>
+                <li class="btn">Jeux Vidéo</li>
+                <li class="btn">Autre</li>
+            </ul>
+        </section>
 
-            <section surveys>
-                <div class="survey">
-                    <label class="btn">Télévision</label>
+        <section surveys class="max-width">
+
+            <div class="survey">
+                <label class="btn">Télévision</label>
+                <a href="./survey.php">
                     <div class="content">
                         <h2>Koh Lanta</h2>
                         <p>Petites questions sur koh Lanta</p>
@@ -39,9 +40,11 @@
                             <p>5 questions</p>
                         </div>
                     </div>
-                </div>
-                <div class="survey">
-                    <label class="btn">Jeux Vidéo</label>
+                </a>
+            </div>
+            <div class="survey">
+                <label class="btn">Jeux Vidéo</label>
+                <a href="./survey.php">
                     <div class="content">
                         <h2>Valorant</h2>
                         <p>Quelles seront les nouveautés du jeu</p>
@@ -51,9 +54,12 @@
                             <p>6 questions</p>
                         </div>
                     </div>
-                </div>
-                <div class="survey">
-                    <label class="btn">Sport</label>
+                </a>
+            </div>
+
+            <div class="survey">
+                <label class="btn">Sport</label>
+                <a href="./survey.php">
                     <div class="content">
                         <h2>Rolland Garros</h2>
                         <p>Venez parier !</p>
@@ -63,9 +69,11 @@
                             <p>2 questions</p>
                         </div>
                     </div>
-                </div>
-                <div class="survey">
-                    <label class="btn">Autre</label>
+                </a>
+            </div>
+            <div class="survey">
+                <label class="btn">Autre</label>
+                <a href="./survey.php">
                     <div class="content">
                         <h2>Apple</h2>
                         <p>Les rumeurs de l'iphone 12</p>
@@ -75,9 +83,11 @@
                             <p>4 questions</p>
                         </div>
                     </div>
-                </div>
-                <div class="survey">
-                    <label class="btn">Autre</label>
+                </a>
+            </div>
+            <div class="survey">
+                <label class="btn">Autre</label>
+                <a href="./survey.php">
                     <div class="content">
                         <h2>Covid 19</h2>
                         <p>Quizz sur le covid</p>
@@ -87,11 +97,10 @@
                             <p>13 questions</p>
                         </div>
                     </div>
+                </a>
+            </div>
 
-                </div>
-            </section>
-
-        </div>
+        </section>
     </main>
 
     <?php

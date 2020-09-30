@@ -1,11 +1,11 @@
-main [categories] ul {
+main section[categories] ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0;
+    padding: 1em 0;
 }
 
-main [categories] ul li {
+main section[categories] ul li {
     display: block;
     text-decoration: none;
     list-style: none;
@@ -13,7 +13,7 @@ main [categories] ul li {
     background-color: var(--main-color);
 }
 
-main [surveys] {
+main section[surveys] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -24,7 +24,7 @@ main .survey {
     position: relative;
     display: block;
     width: 18em;
-    height: 12em;
+    height: 10em;
     border-radius: 5px;
     overflow: hidden;
     margin: 0.5em;
@@ -48,6 +48,8 @@ main .survey .content .about {
     position: absolute;
     bottom: 0;
     line-height: 0.6em;
+    font-size: 0.8em;
+    color: grey;
 }
 
 main .survey label.btn {

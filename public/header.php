@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <a href="#" id="logo" class="item">
+        <a href="http://localhost/fil-rouge-A2/public/" id="logo" class="item">
             <img src="img/poll-solid.svg" alt="Survey Game">
             <h1>Survey Game</h1>
         </a>

@@ -3,13 +3,17 @@ footer {
     bottom: 0;
     z-index: 10;
     width: 100%;
+    background-color: var(--main-color);
+    margin-top: 1em;
+}
+
+footer #content {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    height: 5em;
-    background-color: var(--main-color);
-    margin-top: 1em;
+    min-width: var(--min-width);
 }
 
 footer .item {
@@ -26,4 +30,11 @@ footer .item {
 footer .item:hover {
     border-bottom: 1px solid white;
     transition: border-bottom 0.5s;
+}
+
+@media screen and (max-width: 20em) {
+    footer #content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 }

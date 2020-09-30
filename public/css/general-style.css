@@ -3,7 +3,8 @@
 
 :root {
     --main-color: rgb(38, 62, 77);
-    --accent-color: rgb(45, 112, 13);
+    --accent-color: rgb(32, 196, 207);
+    --min-width: 320px;
     --max-width: 1024px;
 }
 
@@ -12,16 +13,58 @@
     box-sizing: border-box;
 }
 
-select,
+body {
+    min-width: var(--min-width);
+}
+
 input,
-textarea,
-button {
-    appearance: none;
-    border: 0;
-    background-color: transparent;
-    border-radius: 0;
-    outline: none;
+select,
+textarea {
     font-size: 1rem;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="radio"] {
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =============================================================== */
+
+.min-width {
+    min-width: var(--min-width) !important;
+    margin: 0 auto;
 }
 
 .max-width {
@@ -38,4 +81,76 @@ button {
 
 .btn:hover {
     opacity: 0.9;
+}
+
+/* =============================================================== */
+
+.formulaire {
+    width: 30em;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.formulaire .header {
+    width: 100%;
+    padding: 0.5em;
+    background-color: var(--main-color);
+}
+
+.formulaire .body {
+    width: 100%;
+    padding: 1em;
+    background-color: white;
+}
+
+.formulaire h2 {
+    color: white;
+}
+
+.formulaire p {
+    color: whitesmoke;
+}
+
+.formulaire .field {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.formulaire .field ul {
+    width: 100%;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.formulaire .field:last-child {
+    margin-bottom: 0;
+}
+
+.formulaire .field label:first-child {
+    display: inline-block;
+    background-color: white;
+    padding: 0 3px;
+    z-index: 1;
+    -webkit-transform: translateY(50%) translateX(10px);
+    -moz-transform: translateY(50%) translateX(10px);
+    -ms-transform: translateY(50%) translateX(10px);
+    -o-transform: translateY(50%) translateX(10px);
+    transform: translateY(50%) translateX(10px);
+}
+
+.formulaire .field input[type="text"],
+.formulaire .field input[type="number"],
+.formulaire .field textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 0.5rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
