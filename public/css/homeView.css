@@ -13,18 +13,53 @@ main section[categories] ul li {
     background-color: var(--main-color);
 }
 
-main section[surveys] {
+main section[findSurveys],
+main section[mySurveys],
+main section[firendsSurveys] {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .flex-container{
+    display: flex;
+    width: 100%;
+}
+
+main section[findSurveys] h2,
+main section[mySurveys] h2,
+main section[firendsSurveys] h2 {
+    width: 100%;
+    padding: 0.5rem;
+    color: white;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+main section[findSurveys] ul{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
-    margin-top: 1em;
+}
+
+main section[mySurveys] ul,
+main section[firendsSurveys] ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
 }
 
 main .survey {
     position: relative;
     display: block;
-    width: 18em;
-    height: 10em;
+    width: 90%;
+    min-width: 15rem;
+    max-width: 25rem;
+    height: 8em;
     border-radius: 5px;
     overflow: hidden;
     margin: 0.5em;
