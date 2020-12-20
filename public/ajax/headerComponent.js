@@ -5,9 +5,12 @@ const closeButton = $('header [identification] #close-button');
 const loginForm = $('header [identification] .formulaire#login');
 const registerForm = $('header [identification] .formulaire#register');
 const serachInput = $('header nav #search input');
+const navConnected = $('header #nav-connected');
 
 document.addEventListener("DOMContentLoaded", function () {
     localStorage.getItem('isConnected') ? identificationButtonLabel.text('Déconnexion') : null
+
+    localStorage.getItem('isConnected') ? navConnected.css('display', 'bloc') : navConnected.css('display', 'none')
 });
 
 identificationButton.click(function () {
@@ -28,7 +31,7 @@ registerForm.submit(function (e) {
     register();
 })
 
-serachInput.change(function(){
+serachInput.change(function () {
     window.location.href = `./?search=${serachInput.val()}`;
 })
 

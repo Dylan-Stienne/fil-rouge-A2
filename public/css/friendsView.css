@@ -1,0 +1,57 @@
+main h2 {
+    width: 100%;
+    padding: 0.5rem;
+    color: white;
+    background-color: var(--main-color);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+main .content-flex{
+    display: flex;
+}
+
+main .content-flex table{
+    margin-left: 5rem;
+}
+
+main #searching-input {
+    width: 20rem;
+    padding: 0.5em;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+main span.connected-0 {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 99rem;
+    background-color: red;
+    margin-left: 3px;
+}
+
+main span.connected-1 {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 99rem;
+    background-color: green;
+    margin-left: 3px;
+}
+
+main td.friend {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+main.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main table {
+    width: 30rem;
+}

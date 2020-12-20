@@ -70,7 +70,7 @@ class HomeModel extends Database
             "searching" => '%' . $searching . '%'
         );
         $req = $this->query("SELECT survey.id AS survey_id, survey.title AS survey_title, user.id AS friend_id, user.username AS friend_username, survey.category AS survey_category,
-                                count(DISTINCT answers.id) AS choices_count, sum(DISTINCT answers.count) AS answers_count
+                                COUNT(DISTINCT answers.id) AS choices_count, SUM(DISTINCT answers.count) AS answers_count
                             FROM `surveys` AS survey INNER JOIN `users` AS user INNER JOIN `friends` INNER JOIN `surveys_answers` AS answers ON answers.survey_id = survey.id
                             WHERE survey.title LIKE :searching OR survey.category LIKE :searching
                             GROUP BY survey.id LIMIT 0,10", $datas);

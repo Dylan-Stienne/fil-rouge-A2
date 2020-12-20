@@ -18,7 +18,7 @@ body {
     min-width: var(--min-width);
 }
 
-#APP{
+#APP {
     position: relative;
     height: fit-content;
     min-height: 100vh;
@@ -188,4 +188,38 @@ table {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+
+.tableau {
+    max-width: var(--max-width);
+}
+
+.tableau thead {
+    background-color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.tableau th {
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.tableau tr {
+    color: var(--main-color);
+}
+
+.tableau tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+.tableau tr td {
+    padding: 0.3em;
+    text-align: center;
+}
+
+.tableau tr td:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-right: 0.5em;
 }

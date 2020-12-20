@@ -61,6 +61,20 @@
             <p>Connexion</p>
         </div>
     </nav>
+
+    <div id="nav-connected">
+        <div class="content">
+            <a href="./?page=new" class="item">
+                <p>Créer un sondage</p>
+            </a>
+            <a href="./?page=friends" class="item">
+                <p>Mes amis</p>
+            </a>
+            <a href="./?page=profil" class="item">
+                <p>Mon profil</p>
+            </a>
+        </div>
+    </div>
 </header>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

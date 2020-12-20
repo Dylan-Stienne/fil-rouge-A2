@@ -1,5 +1,9 @@
 getFriends();
 
+function pipeUcfirst(item) {
+    return `${item.substr(0, 1).toUpperCase() + item.substr(1)}`
+}
+
 $("#searching-input").keyup(function () {
     $("#searching-list").empty();
     if ($(this).val() != "") {
@@ -12,7 +16,7 @@ $("#searching-input").keyup(function () {
             },
             success: function (response) {
                 response.forEach(user => {
-                    $("#searching-list").append(`<div><button onclick="addFriend(${user.id}, '${user.username}')">Ajouter ${user.username} en amis</button></div>`)
+                    $("#searching-list").append(`<li><button class="btn" onclick="addFriend(${user.id}, '${pipeUcfirst(user.username)}')">Ajouter ${pipeUcfirst(user.username)} en amis</button></li>`)
                 });
             }
         })
@@ -26,24 +30,12 @@ function getFriends() {
         success: function (response) {
             $("#my-friends").empty();
             response.forEach(user => {
-                if (user.is_connected == 1) {
-                    $("#my-friends").append(`
+                $("#my-friends").append(`
                     <tr>
-                    <td>${user.username}</td>
-                    <td><button onclick="removeFriend(${user.id})">Ne plus être amis</button></td>
-                    <td style="color: green">connécté</td>
+                        <td class="friend">${pipeUcfirst(user.username)}<span class="connected-${user.is_connected}"></span></td>
+                        <td><button class="btn" onclick="removeFriend(${user.id})">Ne plus être amis</button></td>
                     </tr>
-                    `)
-                }
-                else {
-                    $("#my-friends").append(`
-                    <tr>
-                    <td>${user.username}</td>
-                    <td><button onclick="removeFriend(${user.id})">Ne plus être amis</button></td>
-                    <td style="color: red">non connécté</td>
-                    </tr>
-                    `)
-                }
+                `)
             });
         }
     })

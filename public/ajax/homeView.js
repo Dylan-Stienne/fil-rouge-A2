@@ -9,7 +9,6 @@ else{
 }
 
 
-
 function pipeUcfirst(item) {
     return `${item.substr(0, 1).toUpperCase() + item.substr(1)}`
 }
@@ -129,7 +128,6 @@ function findSurveys(searching) {
                             <div class="content">
                                 <h3>${pipeUcfirst(survey.survey_title)}</h3>
                                 <div class="about">
-                                    <p>Créé par ${pipeUcfirst(survey.friend_username)}</p>
                                     <p>${survey.answers_count} personnes ont répondu</p>
                                     <p>${survey.choices_count} réponses proposés</p>
                                 </div>
