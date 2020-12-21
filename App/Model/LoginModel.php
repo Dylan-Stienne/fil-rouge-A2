@@ -32,9 +32,9 @@ class LoginModel extends Database
             $datas = array("id" => $_SESSION['id']);
             $this->prepare("UPDATE users SET is_connected = 0 WHERE id = :id", $datas);
             session_destroy();
-
-            echo json_encode(true);
-            return true;
         }
+
+        echo json_encode(true);
+        return true;
     }
 }

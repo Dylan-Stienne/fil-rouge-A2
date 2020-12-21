@@ -8,13 +8,13 @@ const serachInput = $('header nav #search input');
 const navConnected = $('header #nav-connected');
 
 document.addEventListener("DOMContentLoaded", function () {
-    localStorage.getItem('isConnected') ? identificationButtonLabel.text('Déconnexion') : null
+    localStorage.getItem('isConnected') === 'true' ? identificationButtonLabel.text('Déconnexion') : null
 
-    localStorage.getItem('isConnected') ? navConnected.css('display', 'bloc') : navConnected.css('display', 'none')
+    localStorage.getItem('isConnected') === 'true' ? navConnected.css('display', 'bloc') : navConnected.css('display', 'none')
 });
 
 identificationButton.click(function () {
-    localStorage.getItem('isConnected') ? logOut() : openPopup();
+    localStorage.getItem('isConnected') === 'true' ? logOut() : openPopup();
 })
 
 closeButton.click(function () {
@@ -91,14 +91,18 @@ function register() {
 
 //-------------------------------------
 function logOut() {
+    console.log('test deco');
     $.ajax({
         url: "?action=log-out",
         dataType: 'json',
         success: function (response) {
-            localStorage.removeItem('isConnected');
+            console.log(response);
+            console.log('t');
+            localStorage.setItem('isConnected', false);
             identificationButtonLabel.text('Connexion')
             closePopup();
             window.location.href = "./"
         }
+
     })
 }

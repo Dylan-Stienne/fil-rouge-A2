@@ -1,10 +1,10 @@
 getSurveysCategories();
 
-if(localStorage.getItem('isConnected')){
+if (localStorage.getItem('isConnected') === 'true') {
     getFriendsSurveys();
     getMySurveys();
 }
-else{
+else {
     $('.flex-container').css('display', 'none');
 }
 
